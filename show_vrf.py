@@ -1,6 +1,6 @@
 import json 
 
-with open("itepremium_china.json","r") as f: 
+with open("itepremium_china_2.json","r") as f: 
     data2 = json.load(f)
 
 route_as_path = []
@@ -14,7 +14,7 @@ for item in data2['route-information'][0]['route-table'][0]['rt']:
     route_item.append(as_path)
     route_as_path.append(route_item)
 
-with open("vrf_active_china.json","w") as f:
+with open("vrf_active_china_2.json","w") as f:
     json.dump(route_as_path,f)
 
 print ("ok")
